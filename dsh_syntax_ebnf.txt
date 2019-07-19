@@ -1,0 +1,21 @@
+program = statement
+statement = (assignment | declaration) '\n'
+
+assignment = identifier '=' expressionr
+declaration = identifier [':' (identifer | expression) [';' ['\n\t'] expession]...]
+
+expression = regex_literal | string_literal | concat_exp | of_exp | list_exp | function_call
+
+concat_exp = expression '+' expression
+of_exp = number_literal 'of' expression
+
+list_exp = '[' [expression [',']]... ']'
+
+function_call = identifier '!' [expression [(',' | ' ')]]...
+
+regex_literal = '`' | "`" content "`" | '`'
+string_literal = '"' | '\'' content '\'' | '"'
+number_literal = 
+
+
+

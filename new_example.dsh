@@ -1,0 +1,16 @@
+letters = `[a-zA-Z]`
+nums = `[0-9]`
+chars = letters + nums
+
+user
+    name: letters; // ';' is the separator for attributes
+        len! 3 10 
+    age_range: ['infant', 'child', 'teen', 'adult', 'elder'] // implied '1 of'
+    age: range! 0 100
+    email: email!
+    income: '$' + range! 30000 100000
+    
+    info
+        favorite_nums: 3 of range! 0 100
+        favorite_food: 1 of ['burger', 'apple', 'soda', 'cashew']
+        keywords: 3 of ['strong', 'ready', 'determined', 'focused', 'visionary', 'ambitious']

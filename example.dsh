@@ -1,0 +1,16 @@
+user:
+    name: str
+        regex: '[a-zA-Z]'
+        len: [3, 10]
+    age_range: list
+        choices: ['infant', 'child', 'teen', 'adult', 'elder']
+    age: int
+        range: [1, 100]
+    email: email
+        providers: ['google.com', 'yahoo.com']
+    
+    info:
+        favorite_num: [3]int
+            range: [0, 10]
+        favorite_food: list
+            choices: ['burger', 'apple', 'soda', 'cashew']
